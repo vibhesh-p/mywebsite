@@ -1,38 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibhesh Website</title>
 
-    <link rel=stylesheet href = "mystyle.css">
+    <title>Vibhesh Website</title>
+    
+    <script src="https://kit.fontawesome.com/da8a4e5c10.js" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="mystyle.css">
 
 </head>
 
 <body>
     <div id="header">
-        <div id="container">
-            <nav>
-                <ul>
-                    <li> <a href = "#">Home</a></li>
-                    <li><a href = "#">About</a></li>
-                    <li><a href = "#">Gallery</a></li>
-                    <li><a href = "#">Contact</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav> 
 
-            <div id="maintext">
-                <p>Hello, I'm <br />Vibhesh Patneedi</p>
+        
+    </div>
+
+    <div id="home">
+        <div id="name">
+            <p>Hello, I'm <br>Vibhesh Patneedi...</p>
+            <div class="myeffect" id="knowmore">
+                <a href="#about">Read more</a>
             </div>
-            
 
         </div>
 
+        <img src="vibhesh4.png" alt="vibhesh">
+        
+    </div>
+    
+
+    <div id="about">
+        <div id="picture">
+            <img src="vibhesh.jpg" alt="vibhesh">
+        </div>
+        
+        <div id="text">
+            <div id="summary">
+                <h1>About me</h1>
+                <p>Final year student at IIITDM Kancheepuram, Chennai, currently 
+                pursuing B.Tech in ECE. Programming experience in multiple 
+                coding languages with strong analytical and problem-solving ability.</p>   
+            </div>
+            
+                <div id="tabs">
+                    <p class="tab-title active-link" id="education-title" onclick="opentab('education-content')">Education</p>
+                    <p class="tab-title myeffect" id="skills-title" onclick="opentab('skills-content')"> Skills</p>
+                </div>
+                
+                <div id="tab-box">
+                <div class="tab-content active-tab" id="education-content">
+                    <ul>
+                        <li>
+                            <a href="https://www.iiitdm.ac.in/" target="_blank">
+                                <span>IIITDM Kancheepuram, Chennai</span>
+                            </a><br>
+                            B.Tech - ECE (2024)<br>
+                            8.34
+                        </li>
+
+                        <li>
+                            <a href="https://aditya.ac.in/jrcollege/" target="_blank">
+                                <span>Aditya Junior College, Kakinada</span>
+                            </a><br>
+                            Class XII - MPC (2020)<br>
+                            97.3%
+                        </li>
+
+                        <li>
+                            <a href="https://www.saranyaconceptschool.com/" target="_blank">
+                                <span>Saranya Concept School, Kakinada</span>
+                            </a><br>
+                            Class X - CBSE (2018)<br>
+                            96.2%
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="skills-content">
+                    <ul>
+                            <li><span>Programming Languages</span><br>
+                                C, C++, Python, Java
+                            </li>
+
+                            <li><span>Front-end skills</span><br>
+                                HTML, CSS, JavaScript
+                            </li>
+
+                            <li><span>Others</span><br>
+                                DSA, OOP concepts
+                            </li>
+                        </ul></div>
+                    
+                </div>
+
+                </div>
+
+            </div>
+    
+
+    <div id="contact">
+        <div id="details">
+            <h1>My Contacts</h1>
+            <br />
+
+            <div class="contact-item myeffect">
+                <div class="symbol"> <i class="fa-brands fa-square-whatsapp"></i></div>
+                <div class="item-text"><p>6302074025</p> </div>
+            </div>
+
+            <a href="mailto:vibhesh.patneedi@gmail.com">
+                <div class="contact-item myeffect">
+                
+                    <div class="symbol">  <i class="fa-solid fa-envelope"></i>  </div>
+                    <div class="item-text"> <p>vibhesh.patneedi@gmail.com</p></div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/vibhesh-patneedi/" target="_blank"> 
+                <div class="contact-item myeffect">      
+                    <div class="symbol"> <i class="fa-brands fa-linkedin"></i>  </div>
+                    <div class="item-text">
+                        <p>linkedin</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://goo.gl/maps/UjowaUdeXZCnM68EA" target="_blank"> 
+                <div class="contact-item myeffect">      
+                    <div class="symbol"> <i class="fa-solid fa-location-dot"></i>  </div>
+                    <div class="item-text">
+                        <p>Chennai, Tamil Nadu</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    
+        <div id="message">
+            <h1>Send a message</h1>
+            <form name="submit-to-google-sheet">
+                <input class="in" name="Name" type="string" placeholder="Name" required>
+                <input class="in" name="Email" type="mail" placeholder="Email ID" required>
+                <input class="in" name="Mobile" type="number" placeholder="Mobile number" required>
+                <textarea class="in" name="Message" placeholder="Type your message here" rows="6" required></textarea>
+                <button class="in myeffect" type="submit">Submit</button>
+                <span id="msg"> </span>
+            </form>
+            
+        </div>
     </div>
 
-
+    <div id="copyright">
+        <p align="center">Copyright © Vibhesh Patneedi</p>
+    </div>
 </body>
-    
+
+<script>        
+    function opentab(tab){
+        var titles = document.getElementsByClassName("tab-title")
+        var contents = document.getElementsByClassName("tab-content")
+
+        for (title of titles){
+            title.classList.remove("active-link")
+            title.classList.add("myeffect")
+        }
+
+        for (content of contents)
+            content.classList.remove("active-tab")
+
+        event.currentTarget.classList.add("active-link")
+        event.currentTarget.classList.remove("myeffect")
+        document.getElementById(tab).classList.add("active-tab")
+    }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1PqEes0iWJd4uKXudb6LG24yDlOi7fkL8do20YBTG1t7RFs0Vb7mRCDvhqTpyrjKW/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message submitted !! "
+            setTimeout(
+                function(){
+                    msg.innerHTML =" "
+                }, 5000)
+
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 
 </html>

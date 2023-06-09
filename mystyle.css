@@ -4,35 +4,31 @@
     color:white;
 }
 
-#header{
-    width : 100%;
-    height: 100vh;
-
-    background-image: url("bg_img.jpg");
-    background-size: cover;
-    background-position: center;
+html{
+    scroll-behavior: smooth;
 }
 
-#container{
-    padding: 5px 0%;
+body{
+    background-color:rgb(80, 80, 80);
 }
 
+/* Navigation bar */
 nav{
-    margin : 30px 10px;
+    background-color:rgb(80, 80, 80);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    position:fixed;
+    width:100%;
+    z-index: 100;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 5px 20px;
-    padding : 0;
-
+    margin: 20px 20px;
+    padding: 0;
     font-size:130%;
-
     position: relative;
 }
 
@@ -45,20 +41,354 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height : 3px;
-    background: red;
+    background: crimson;
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -4px;
     transition: 0.1s;
+    
 }
 
 nav ul li a:hover::after{
     width: 100%;
 }
 
-#maintext{
+/* Home page */
+#home{
+    display:flex;
+    height:100vh;
+}
+
+#name{
+    display:block;
     font-size:400%;
     font-style:oblique;
     margin:10% 10%;
+    margin-top:auto;
+    margin-bottom:auto;
     font-size:bold;
 }
+
+#name #knowmore{
+    width:90px;
+    font-size:20px;
+    font-style:normal;
+    background-color:crimson;
+    border:solid;
+    border-width:0.5px;
+    border-color:white;
+    margin-top:20px;
+    margin-left:5px;
+    padding:5px 10px;
+    border-radius:10px;
+    
+}
+
+img{
+    background-color: rgb(47, 47, 47);
+    border-radius:30px;
+    border:solid;
+    border-color:white;
+    padding:0;
+    margin-top:auto;
+    margin-bottom:auto;
+    width: 450px;
+    height: 450px;
+}
+
+/* About section */
+#about{
+    display:flex;
+    height:100vh;
+}
+
+#about #picture{
+    flex-basis:40%;
+    margin-left:50px;
+}
+#about #text{
+    flex-basis:60%;
+    margin-top:130px;
+    margin-left:auto;
+    margin-bottom:auto;
+    margin-right:100px;
+}
+
+#about #summary h1{
+    font-weight:normal;
+    margin-bottom:5px;
+    color:crimson;
+    -webkit-text-stroke: 0.2px black;
+}
+
+#about img{
+    display: block;
+    margin-top:100px;
+    margin-left:50px;
+    margin-bottom:auto;
+    margin-right:auto;
+    width:350px;
+    border-radius:30px;
+}
+
+#about #tabs{
+    display:flex;
+    
+    width:150px;
+}
+
+#about .tab-title{
+    font-size: 20px;
+    margin:20px 20px 5px 0px;
+    cursor:pointer;
+    position:relative;
+    color:lightgrey;
+}
+
+#about .tab-title.active-link{
+    font-size: 20px;
+    cursor:pointer;
+    position:relative;
+    font-weight: bolder;
+    border-bottom: none;
+    color:white;
+}
+
+#about .tab-title::after{
+    content:"";
+    width:0;
+    height:2px;
+    left:0;
+    position:absolute;
+    background-color:red;
+    transition:0.1s;
+    bottom:-1px;
+}
+
+#about .tab-title.active-link::after{
+    width:100%;
+}
+
+.tab-content{
+    margin-top:10px;
+    display:none;
+}
+
+.tab-content.active-tab{
+    display:block;
+}
+
+#about .tab-content ul li{
+    list-style:none;
+    padding:0px 0px 10px 0px;
+    line-height: 20px;
+}
+
+#about .tab-content span{
+    color:crimson;
+    font-size:16px;
+}
+
+#about .tab-content span:hover{
+    color:crimson;
+    font-weight: bold;
+    transform:scale(10);
+}
+a{
+    text-decoration:none;
+}
+
+/* Contact section */
+#contact {
+    display:flex;
+    height:95vh;
+}
+
+#details{
+    margin-top:100px;
+    margin-left:100px;
+    padding-left:50px;
+    flex-basis:40%; 
+}
+
+#details a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.contact-item{
+    display:flex;
+    padding:10px;
+}
+
+.contact-item .symbol i{
+    color:crimson;
+    scale: 1.8;
+}
+
+.contact-item .item-text p{
+    font-size:20px;
+    margin-left:15px;
+}
+
+
+
+#message{
+    margin-top:100px;
+    padding-left:50px;
+    flex-basis:60%;
+}
+
+form input, textarea{
+    width:60%;
+    display:flex;
+    flex-direction:column;
+    margin: 10px 0px;
+    font-size:16px;
+    padding:16px 10px;
+    border-radius:5px;
+    border:none;
+    background:grey;
+    scroll-behavior: none;
+}
+
+form button{
+    margin:10px 0px;
+    color:white;
+    background:crimson;
+    width:100px;
+    height:40px;
+    border-radius:10px;
+    border-color:white;
+    border-width:1px;
+
+}
+
+::placeholder {
+    color:white;
+  }
+
+#msg{
+    margin:0px 10px;
+    color:crimson;
+}
+
+.myeffect:hover{
+    transform:scale(1.1)
+    
+}
+
+/* For mobile screen  */
+@media only screen and (max-width:800px){
+    nav{
+        background-color:rgb(80, 80, 80);
+        padding:5px;
+    }
+    nav ul li{
+        font-size:22px;
+        margin: 10px 10px;
+    }
+
+    nav ul li a::after{
+        width: 0%;
+        height: 1.5px;
+        bottom: -1px;
+    }
+
+    #home #knowmore{
+        display:none;
+    }
+
+    #home{
+        display:flex;
+        flex-direction:column-reverse;
+        height:600px;
+    }
+
+    #name p{
+        font-size:40px;
+        padding: 0px 0px 0px 0px;
+        text-align: center;
+    }
+
+    img{
+        background-color: rgb(67, 67, 67);
+        border-radius:30px;
+        width: 85%;
+        height:fit-content;
+        display: block;  
+        margin-top:90px; 
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #about{
+        width:80%;
+        padding-top:50px;
+        margin:auto;
+        height:450px;
+        display: block;  
+    }
+
+    #about #text{
+        margin:0px;
+    }
+    
+
+    #about #picture img{
+        display: none;  
+    }
+
+    #summary h2{
+        color:red;
+        
+    }
+
+    #about #tabs{
+        display:flex;
+        justify-content:space-between;
+    }
+    
+    #about #tab-box{
+        height:200px;
+    }
+
+    #about .tab-content span{
+        color:crimson;
+        font-weight: bold;
+    }
+
+    #contact {
+        width:85%;
+        height:750px;
+        display:block;
+        margin:0px;
+    }
+
+    #details{
+        margin:0px;
+    }
+
+    #contact p{
+        font-size:16px;
+    }
+
+    .contact-item{
+        display:flex;
+        padding:5px;
+    }
+
+    .contact-item .symbol{
+        scale:0.9;
+    }
+
+    #message{
+        margin:20px 0px;
+    }
+
+    form input, textarea{
+        width:90%;
+
+    }
+}
+
