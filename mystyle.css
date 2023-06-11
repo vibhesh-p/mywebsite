@@ -280,8 +280,16 @@ form button{
 
 /* For mobile screen  */
 @media only screen and (max-width:800px){
+    *{
+        color:rgb(0, 0, 0);
+    }
+    
+    body{
+        background-color:rgb(235, 249, 255);
+    }
+    
     nav{
-        background-color:rgb(80, 80, 80);
+        background-color:rgb(235, 249, 255);
         padding:5px;
     }
     nav ul li{
@@ -307,12 +315,13 @@ form button{
 
     #name p{
         font-size:40px;
-        padding: 0px 0px 0px 0px;
+        padding: 20px 0px 0px 0px;
         text-align: center;
     }
 
     img{
-        background-color: rgb(67, 67, 67);
+        background-color: rgb(207, 207, 207);
+        border-color:black;
         border-radius:30px;
         width: 85%;
         height:fit-content;
@@ -347,6 +356,10 @@ form button{
     #about #tabs{
         display:flex;
         justify-content:space-between;
+    }
+
+    #about #tabs p{
+        color:black;
     }
     
     #about #tab-box{
@@ -388,7 +401,7 @@ form button{
 
     form input, textarea{
         width:90%;
-
+        background-color:rgb(181, 181, 181);
     }
 }
 
