@@ -1,7 +1,8 @@
 *{
     margin:0;
     padding:0;
-    color:white;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html{
@@ -9,18 +10,19 @@ html{
 }
 
 body{
-    background-color:rgb(80, 80, 80);
+    background-color:rgb(235, 249, 255);
 }
 
 /* Navigation bar */
 nav{
-    background-color:rgb(80, 80, 80);
+    background-color:rgb(235, 249, 255);
     display: flex;
     align-items: center;
     justify-content: space-between;
     position:fixed;
     width:100%;
     z-index: 100;
+    
 }
 
 nav ul li{
@@ -29,6 +31,7 @@ nav ul li{
     margin: 20px 20px;
     padding: 0;
     font-size:130%;
+    font-weight:bold;
     position: relative;
 }
 
@@ -51,6 +54,7 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
     width: 100%;
+    box-shadow: 2px 2px 2px grey;
 }
 
 /* Home page */
@@ -76,35 +80,41 @@ nav ul li a:hover::after{
     background-color:crimson;
     border:solid;
     border-width:0.5px;
-    border-color:white;
+    border-color:black;
     margin-top:20px;
     margin-left:5px;
     padding:5px 10px;
     border-radius:10px;
-    
+    box-shadow: 2px 2px 2px grey;
+}
+
+#name #knowmore p{
+    color:white;
 }
 
 img{
-    background-color: rgb(47, 47, 47);
+    background-color:  rgb(207, 207, 207);
     border-radius:30px;
     border:solid;
-    border-color:white;
+    border-color:black;
     padding:0;
     margin-top:auto;
     margin-bottom:auto;
     width: 450px;
     height: 450px;
+    box-shadow: 2px 2px 2px grey;
 }
 
 /* About section */
 #about{
-    display:flex;
     height:100vh;
+    display:flex;
 }
 
 #about #picture{
     flex-basis:40%;
     margin-left:50px;
+    
 }
 #about #text{
     flex-basis:60%;
@@ -115,10 +125,14 @@ img{
 }
 
 #about #summary h1{
-    font-weight:normal;
+    font-weight:bold;
     margin-bottom:5px;
     color:crimson;
-    -webkit-text-stroke: 0.2px black;
+}
+
+#about #summary{
+   font-size:18px;
+   font-weight:500;
 }
 
 #about img{
@@ -129,11 +143,11 @@ img{
     margin-right:auto;
     width:350px;
     border-radius:30px;
+    box-shadow: 2px 2px 2px grey;
 }
 
 #about #tabs{
     display:flex;
-    
     width:150px;
 }
 
@@ -142,7 +156,7 @@ img{
     margin:20px 20px 5px 0px;
     cursor:pointer;
     position:relative;
-    color:lightgrey;
+    color:black;
 }
 
 #about .tab-title.active-link{
@@ -151,7 +165,7 @@ img{
     position:relative;
     font-weight: bolder;
     border-bottom: none;
-    color:white;
+    color:black;
 }
 
 #about .tab-title::after{
@@ -172,6 +186,7 @@ img{
 .tab-content{
     margin-top:10px;
     display:none;
+    font-size: 16px;
 }
 
 .tab-content.active-tab{
@@ -187,13 +202,13 @@ img{
 #about .tab-content span{
     color:crimson;
     font-size:16px;
+    font-weight:bold;
 }
 
 #about .tab-content span:hover{
-    color:crimson;
-    font-weight: bold;
     transform:scale(10);
 }
+
 a{
     text-decoration:none;
 }
@@ -202,6 +217,7 @@ a{
 #contact {
     display:flex;
     height:95vh;
+    
 }
 
 #details{
@@ -248,8 +264,9 @@ form input, textarea{
     padding:16px 10px;
     border-radius:5px;
     border:none;
-    background:grey;
+    background:rgb(164, 164, 164);
     scroll-behavior: none;
+    box-shadow: 2px 2px 2px grey;
 }
 
 form button{
@@ -259,13 +276,14 @@ form button{
     width:100px;
     height:40px;
     border-radius:10px;
-    border-color:white;
+    border-color:black;
     border-width:1px;
-
+    font-size:16px;
+    box-shadow: 2px 2px 2px grey;
 }
 
 ::placeholder {
-    color:white;
+    color:black;
   }
 
 #msg{
@@ -404,4 +422,3 @@ form button{
         background-color:rgb(181, 181, 181);
     }
 }
-
